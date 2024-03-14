@@ -1,0 +1,24 @@
+import UIKit
+
+class ProductViewController: UIViewController {
+    
+    // Outlets
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    // Properties
+    var productImage: UIImage?
+    var productPrice: Double = 0.0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Set product image
+        if let image = productImage {
+            productImageView.image = image
+        }
+        
+        // Set product price
+        priceLabel.text = "$\(productPrice)"
+    }
+}
